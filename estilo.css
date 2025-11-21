@@ -195,7 +195,6 @@ body {
     margin: 0;
     /* ¡Asegúrate de que la línea 'overflow: hidden;' ya no esté aquí! */
 }
-}
 
 /* Estilo para los enlaces */
 a {
@@ -239,5 +238,6 @@ a {
     --cursor-size: 35px; /* Aumenta el tamaño para que sea más notable */
     opacity: 0.8; /* Lo hace un poco transparente */
 }
+
 
 
