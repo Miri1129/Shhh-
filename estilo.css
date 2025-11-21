@@ -180,4 +180,60 @@ section {
     cursor: pointer;
     z-index: 99999;
     border: 1px solid red;
+
+}
+
+
+
+
+/* Estilo cursor */
+body {
+    cursor: none; 
+    height: 100vh;
+    background-color: #1a1a1a; 
+    margin: 0;
+    overflow: hidden; 
+}
+
+/* Estilo para los enlaces */
+a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    margin: 20px;
+    display: inline-block;
+}
+
+/* circulo*/
+.cursor-neon {
+    --cursor-size: 20px; 
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border-radius: 50%; 
+    background-color: #39ff14; 
+    pointer-events: none; 
+    position: fixed; 
+    z-index: 9999; 
+    transform: translate(-50%, -50%); 
+    
+    /* Efecto neón */
+    box-shadow: 
+        0 0 5px #39ff14, 
+        0 0 15px #39ff14, 
+        0 0 30px #39ff14, 
+        0 0 50px #39ff14;
+    
+    /* animación */
+    transition: 
+        transform 0.1s ease-out, 
+        width 0.1s ease-out, 
+        height 0.1s ease-out; 
+}
+
+/* 3. Estilo de Animación */
+
+/* Esta clase se añade con JavaScript al pasar sobre un elemento interactivo (como un enlace) */
+.cursor-neon.hover {
+    --cursor-size: 35px; /* Aumenta el tamaño para que sea más notable */
+    opacity: 0.8; /* Lo hace un poco transparente */
 }
