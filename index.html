@@ -20,30 +20,32 @@
 
 
 
-    <div class="cursor-neon"></div>
+   <div class="cursor-neon"></div>
 
-    <a href="#"></a>
+    <a href="#">Pasa el ratón aquí</a>
 
     <script>
-        
+        // 1. Obtener el elemento del cursor
         const cursor = document.querySelector('.cursor-neon');
         
-       
+        // 2. Escuchar el movimiento del ratón
         document.addEventListener('mousemove', e => {
-            
+            // Establecer la posición del cursor personalizado para que siga al ratón
+            // La transición suave se maneja en el CSS
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
 
-        
+        // 3. Añadir animación de hover para elementos interactivos
+        // Puedes añadir más selectores (por ejemplo, 'button') si tienes más elementos interactivos
         const links = document.querySelectorAll('a, button, .interactive');
         
         links.forEach(link => {
             link.addEventListener('mouseenter', () => {
-                cursor.classList.add('hover'); 
+                cursor.classList.add('hover'); // Añade la clase CSS 'hover'
             });
             link.addEventListener('mouseleave', () => {
-                cursor.classList.remove('hover'); 
+                cursor.classList.remove('hover'); // Remueve la clase CSS 'hover'
             });
         });
     </script>
