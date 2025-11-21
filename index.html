@@ -17,6 +17,39 @@
 </head>
 
 <body style="background-color: black;">
+
+
+
+    <div class="cursor-neon"></div>
+
+    <a href="#"></a>
+
+    <script>
+        
+        const cursor = document.querySelector('.cursor-neon');
+        
+       
+        document.addEventListener('mousemove', e => {
+            
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        
+        const links = document.querySelectorAll('a, button, .interactive');
+        
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover'); 
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover'); 
+            });
+        });
+    </script>
+
+
+    
     <!-- Intro UwU-->
     <div id="intro">
         <video autoplay muted playsinline>
