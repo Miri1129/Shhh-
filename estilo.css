@@ -188,11 +188,13 @@ section {
 
 /* Estilo cursor */
 body {
-    cursor: none; 
-    height: 100vh;
+   cursor: none; /* Esto oculta el cursor predeterminado */
+    /* Puedes mantener el height: 100vh; o ajustarlo/eliminarlo si ya tienes contenido */
+    height: 100vh; 
     background-color: #1a1a1a; 
     margin: 0;
-    overflow: hidden; 
+    /* ¡Asegúrate de que la línea 'overflow: hidden;' ya no esté aquí! */
+}
 }
 
 /* Estilo para los enlaces */
@@ -237,3 +239,4 @@ a {
     --cursor-size: 35px; /* Aumenta el tamaño para que sea más notable */
     opacity: 0.8; /* Lo hace un poco transparente */
 }
+
